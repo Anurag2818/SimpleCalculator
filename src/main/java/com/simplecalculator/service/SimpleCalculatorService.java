@@ -85,6 +85,14 @@ public class SimpleCalculatorService {
 		return simpleCalculatorRepo.findAll();
 	}
 
+	/**
+	 * This method will actually store the calculation information in Database Repo
+	 * 
+	 * @param firstOperand
+	 * @param secondOperand
+	 * @param operation
+	 * @param result
+	 */
 	private void saveOperation(int firstOperand, int secondOperand, String operation, double result) {
 		SimpleCalculator simpleCalculator = new SimpleCalculator();
 		simpleCalculator.setFirstOperand(firstOperand);

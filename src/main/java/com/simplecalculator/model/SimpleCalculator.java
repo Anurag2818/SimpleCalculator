@@ -9,12 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.stereotype.Component;
-
 /**
  * This is the Model class responsible for containing the data for Calculation
  */
-@Component
 @Entity
 @Table(name = "SIMPLECALCULATOR")
 public class SimpleCalculator implements Serializable {

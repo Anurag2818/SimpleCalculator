@@ -1,10 +1,8 @@
 package com.simplecalculator.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,35 +21,30 @@ public class SimpleCalculatorResource {
 
 	@GetMapping("/history")
 	public java.util.List<SimpleCalculator> getHistory() {
-		java.util.List<SimpleCalculator> calculationHistory = simpleCalculatorService.getHistory();
-		return calculationHistory;
+		return simpleCalculatorService.getHistory();
 	}
 
 	@GetMapping("/add/{firstOperand}/{secondOperand}")
 	public Double add(@PathVariable("firstOperand") Integer firstOperand,
 			@PathVariable("secondOperand") Integer secondOperand) {
-		Double additionResult = simpleCalculatorService.add(firstOperand, secondOperand);
-		return additionResult;
+		return simpleCalculatorService.add(firstOperand, secondOperand);
 	}
 
 	@GetMapping("/sub/{firstOperand}/{secondOperand}")
 	public Double substract(@PathVariable("firstOperand") Integer firstOperand,
 			@PathVariable("secondOperand") Integer secondOperand) {
-		Double substrationResult = simpleCalculatorService.substract(firstOperand, secondOperand);
-		return substrationResult;
+		return simpleCalculatorService.substract(firstOperand, secondOperand);
 	}
 
 	@GetMapping("/multiply/{firstOperand}/{secondOperand}")
 	public Double multiply(@PathVariable("firstOperand") Integer firstOperand,
 			@PathVariable("secondOperand") Integer secondOperand) {
-		Double multiplicationResult = simpleCalculatorService.multiply(firstOperand, secondOperand);
-		return multiplicationResult;
+		return simpleCalculatorService.multiply(firstOperand, secondOperand);
 	}
 
 	@GetMapping("/divide/{firstOperand}/{secondOperand}")
 	public Double divide(@PathVariable("firstOperand") Integer firstOperand,
 			@PathVariable("secondOperand") Integer secondOperand) throws IllegalArgumentException {
-		Double divisionResult = simpleCalculatorService.divide(firstOperand, secondOperand);
-		return divisionResult;
+		return simpleCalculatorService.divide(firstOperand, secondOperand);
 	}
 }

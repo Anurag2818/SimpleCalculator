@@ -37,7 +37,7 @@ class SimpleCalculatorServiceTests {
 	SimpleCalculatorService service;
 
 	@Test
-	public void addTest() {
+	void addTest() {
 		Double expected = 10.0;
 		SimpleCalculator model = setModel(expected);
 		Mockito.when(repo.save(Mockito.any())).thenReturn(model);
@@ -46,7 +46,7 @@ class SimpleCalculatorServiceTests {
 	}
 
 	@Test
-	public void substractTest() {
+	void substractTest() {
 		Double expected = 3.0;
 		SimpleCalculator model = setModel(expected);
 		Mockito.when(repo.save(Mockito.any())).thenReturn(model);
@@ -55,7 +55,7 @@ class SimpleCalculatorServiceTests {
 	}
 
 	@Test
-	public void multiplyTest() {
+	void multiplyTest() {
 		Double expected = 6.0;
 		SimpleCalculator model = setModel(expected);
 		Mockito.when(repo.save(Mockito.any())).thenReturn(model);
@@ -64,7 +64,7 @@ class SimpleCalculatorServiceTests {
 	}
 
 	@Test
-	public void divideTest() {
+	void divideTest() {
 		Double expected = 2.0;
 		SimpleCalculator model = setModel(expected);
 		Mockito.when(repo.save(Mockito.any())).thenReturn(model);
@@ -80,7 +80,7 @@ class SimpleCalculatorServiceTests {
 	}
 
 	@Test
-	public void getHistoryTest() {
+	void getHistoryTest() {
 		List<SimpleCalculator> expectedList = new ArrayList<SimpleCalculator>();
 		expectedList.add(setModel(2.0));
 		expectedList.add(setModel(3.0));

@@ -20,6 +20,7 @@ public class SimpleCalculatorApplication {
 		SpringApplication.run(SimpleCalculatorApplication.class, args);
 	}
 
+	// For Fixing the Cross-origin resource sharing (CORS) issue.
 	@Bean
 	public CorsFilter corsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
