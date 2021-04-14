@@ -1,13 +1,22 @@
 # SimpleCalculator
 This Repo holds the code for Simple Calculator using Spring-boot Restful API's
 
-
 # Development
 
 <li>Java 11</li>
 <li>Spring boot 2.4.4</li>
 <li>H2 Database</li>
 <li>Maven 3.5.4</li>
+
+# Application Functionality
+
+This project is implemented for performing below operations:
+
+<li>Addition</li>
+<li>Substraction</li>
+<li>Multiplication</li>
+<li>Division</li>
+<li>Calculation History</li>
 
 # Starting the App:
 
